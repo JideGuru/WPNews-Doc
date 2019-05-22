@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Flutter WP News</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Flutter WP News&rdquo; Documentation by &ldquo;JideGuru&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Flutter WP News&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 21/5/2019<br>
+					By: JideGuru<br>
+					Email: <a href="mailto:guruliciousjide@gmail.com">guruliciousjide@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="https://codecanyon.net/user/jideguru">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#folderStructure">Folder Structure</a></li>
+			<li><a href="#setupflutter">Setting up Futter Development Environment</a></li>
+			<li><a href="#firebase">Firebase and Onesignal</a></li>
+			<li><a href="#runApp">Setup and Run the source code</a></li>
+			<li><a href="#wpnotif">Setup Wordpress notification</a></li>
+			<li><a href="#signapk">Generate a release version of app</a></li>
+			<li><a href="#conclusion">Conclusion</a></li>
+		
+		</ol>
+		
+		<hr>
+		
+		<h3 id="installation"><strong>A) Introduction</strong> - <a href="#toc">top</a></h3>
+
+		<p>WP News - Flutter WordPress News Blog app is a wordpress blog app that can be used to make blogs into apps. It was Made Using the Flutter Framework</p>
+		
+		
+		<h3 id="folderStructure"><strong>B) Folder Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p> The application folder contain the following Folders and structure </p>
+
+		<img src="assets/images/structure.png" alt="Folder Structure" />
+
+	
+		<hr>
+		
+		<h3 id="setupflutter"><strong>C) Setting up Futter Development Environment</strong> - <a href="#toc">top</a></h3>
+		
+		<h5>Before you start</h5>
+		<li>This documentation was created to help you with the installation and configuration of WP News application. Please, read it carefully to avoid most of potential problems with incorrect configuration.</li>
+
+		<li>This chapter describes how to install Flutter, Android Studio and Xcode(to build for ios only for people with MacOS X). You don't have to install Android Studio, but it's better. The project can be built without Android Studio, using VSCode or IntelliJ with Gradle build system.</li>
+
+		<br>
+		<h4><b>Set up Android Studio</b></h4>
+		<a href="https://developer.android.com/studio/install">For more Information</a><br><br>
+
+		<img src="assets/images/studiosite.png" width="700px" alt="Studio" />
+		<br><li><b>For Windows</b></li>
+		Download <a href="https://developer.android.com/studio/">.exe file from here</a> and launch. After launching, follow the installation guide.<br><br>
+
+		<li><b>For Mac</b></li>
+		<li>1. Download <a href="https://developer.android.com/studio/">.dmg file from here</a>.</li>
+		<li>2. Launch the Android Studio DMG file.</li>
+		<li>3. Drag and drop Android Studio into the Applications folder, then launch Android Studio.</li>
+		<li>4. Select whether you want to import previous Android Studio settings, then click OK.</li>
+		<li>5. The Android Studio Setup Wizard guides you through the rest of the setup, which includes downloading Android SDK components that are required for development.</li><br><br>
+
+
+		<li><b>For Linux</b></li>
+		<li>1. Download <a href="https://developer.android.com/studio/">.zip file from here</a> and launch. After launching, drag the Android Studio into the Applications folder.</li>
+		<li>2. Unpack the .zip file you downloaded to an appropriate location for your applications, such as within /usr/local/ for your user profile, or /opt/ for shared users.</li>
+		<li>3. Select whether you want to import previous Android Studio settings or not, then click OK.</li>
+		<li>4. The Android Studio Setup Wizard guides you through the rest of the setup, which includes downloading Android SDK components that are required for development.</li>
+		<br>
+		<br>
+
+		<h4><b>Set up Xcode (Requires MacOS X)</b></h4>
+		<a href="https://medium.com/@LondonAppBrewery/how-to-download-and-setup-xcode-10-for-ios-development-b63bed1865c">For more Information</a><br><br>
+		<img src="assets/images/xcodesite.png" width="700px" alt="Xcode" />
+
+		<li>Open the App Store</li>
+		<li>Search for Xcode</li>
+		<li>Install and Launch Xcode</li><br><br>
+
+
+		<h4><b>Set up Flutter SDK</b></h4>
+		<a href="https://flutter.dev/docs/get-started/install/">For more Information</a><br><br>
+		<img src="assets/images/fluttersite.png" width="700px" alt="Flutter" />
+
+		<br><li><b>For Windows</b></li>
+		<li>Download <a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_v1.5.4-hotfix.2-stable.zip">.zip file from here</a></li>
+		<li>Extract the zip file and place the contained flutter in the desired installation location for the Flutter SDK (eg. C:\src\flutter; do not install Flutter in a directory like C:\Program Files\ that requires elevated privileges).</li>
+		<li>Locate the file flutter_console.bat inside the flutter directory. Start it by double-clicking.</li>
+		<li>You are now ready to run Flutter commands in the Flutter Console! <a href="https://flutter.dev/docs/get-started/install/windows">Read More about updating your path here</a></li><br>
+
+		<br><li><b>For MacOS X</b></li>
+		<li>Download <a href="https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.5.4-hotfix.2-stable.zip">.zip file from here</a></li>
+		<li>Extract the file in the desired location</li>
+		<li><a href="https://flutter.dev/docs/get-started/install/macos#update-your-path">Update your path</a> then run flutter doctor</li><br>
+
+		<br><li><b>For Linux</b></li>
+		<li>Download <a href="https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.5.4-hotfix.2-stable.tar.xz">.tar.xz file from here</a></li>
+		<li>Extract the file in the desired location</li>
+		<li><a href="https://flutter.dev/docs/get-started/install/linux#update-your-path">Update your path</a> then run flutter doctor</li><br>
+
+
+		<h4><b>Set up a Code Editor to run flutter</b></h4>
+		<a href="https://flutter.dev/docs/get-started/editor">For more Information</a><br><br>
+
+		<img src="assets/images/studio.png" width="100px" alt="Studio" />
+		<br><li><b>Android Studio / IntelliJ</b></li>
+		<li>Start Android Studio</li>
+		<li>Open plugin preferences (Preferences > Plugins on macOS, File > Settings > Plugins on Windows & Linux).</li>
+		<li>Select Browse repositories, select the Flutter plugin and click Install.</li>
+		<li>Click Yes when prompted to install the Dart plugin.</li>
+		<li>Click Restart when prompted.</li><br><br>
+
+
+		<img src="assets/images/vscode.jpg" width="300px" alt="VSCode" />
+		<br><li><b>VSCode</b></li>
+		<li>Start VS Code.</li>
+		<li>Invoke View > Command Palette….</li>
+		<li>Type “install”, and select Extensions: Install Extensions.</li>
+		<li>Type “flutter” in the extensions search field, select Flutter in the list, and click Install. This also installs the required Dart plugin.</li>
+
+		<br>
+		<br>
+		<hr>
+		
+		<h3 id="firebase"><strong>D) Connect Firebase to OneSignal</strong> - <a href="#toc">top</a></h3>
+		
+		<h4><li>Goto <a href="http://firebase.com">firebase.com</a> and login to your account.</li></h4>
+		<img src="assets/images/firebase1.png" width="700px" alt="firebase" /><br>
+		<br>
+		
+		<h4><li>Click on add project to create a new project</li></h4>
+		<img src="assets/images/firebase2.png" width="700px" alt="firebase" /><br>
+		<img src="assets/images/firebase3.png" width="300px" alt="firebase" /><br>
+		<br>
+		<p>Now your firebase project has been created. TO create a OneSignal account navigate to <a href="http://onesignal.com">onesignal.com</a> and create an account.</p>
+		<br>
+		<h4><li>Click on add app to create a new project</li></h4>
+		<img src="assets/images/onesignal1.png" width="700px" alt="onesignal" /><br>
+		<br>
+		<h4><li>After creation a pop up box will appear for configuration. Choose the platform(s) you want which can be either Android or iOS or both</li></h4>
+		<img src="assets/images/onesignal2.png" width="700px" alt="onesignal" /><br>
+		<img src="assets/images/onesignal3.png" width="700px" alt="onesignal" /><br>
+		<h4><li>Now go back to your firebase and copy Sender ID and Server key and paste into the onesignal pop up.</li></h4>
+		<img src="assets/images/firebase4.png" width="700px" alt="firebase" /><br>
+		<h4><li>After that just close the popup because the SDK as already been setup in the app's source code</li></h4>
+
+
+
+		<hr>
+		
+		<h3 id="runApp"><strong>E) Setup and Run the source code</strong> - <a href="#toc">top</a></h3>
+		<p>To run the app the below steps should be follow carefully. please pay close attention</p> 
+		<li>Open the source code in your prefered editor(i will be using android studio).</li>
+		<img src="assets/images/as1.png" width="700px" alt="AS" /><br>
+		<p><b>NOTE:</b> The flutter files are in the "lib" folder.</p><br>
+		<br>
+		<li>To edit some usual variables like name, blog address and so on, open the constants.dart file in lib/util.</li>
+		<img src="assets/images/as2.png" width="700px" alt="AS" /><br>
+		<p><b>EDIT</b> to your taste.</p><br>
+
+		<li>One signal appID can be gotten from the dashboard. Goto app settings and Keys&IDs</li>
+		<img src="assets/images/onesignal4.png" width="700px" alt="onesignal" /><br>
+		<img src="assets/images/onesignal5.png" width="700px" alt="onesignal" /><br>
+		<p><b>Note</b> you also need to put the onesignal ID in the android app gradle.</p><br>
+		<img src="assets/images/as3.png" width="700px" alt="AS" /><br>
+		<br>
+
+		<li>To change app color. Open the main.dart present in the lib folder.</li>
+		<img src="assets/images/as4.png" width="700px" alt="AS" /><br>
+
+		<li>To change app icon. Replace logo.png in the assets folder</li>
+
+		<br>
+		<hr>
+		<h3 id="wpnotif"><strong>F) Setup Wordpress notification</strong> - <a href="#toc">top</a></h3>
+
+		<p>Setting up notification from wordpress so we get notified everytime a new post has been made!</p>
+		<br>
+		<li>Login to Wordpress Admin Panel</li>
+		<img src="assets/images/wp1.png" width="700px" alt="WP" /><br>
+		<br>
+		<li>Navigate to plugins and search for "Onesignal" then install</li>
+		<img src="assets/images/wp2.png" width="700px" alt="WP" /><br>
+
+		<br>
+		<li>After installing, goto "OneSignal Push".</li>
+		<img src="assets/images/wp3.png" width="700px" alt="WP" /><br>
+		<br>
+
+		<li>Add appid and Rest API key from onesignal.</li>
+		<img src="assets/images/onesignal5.png" width="700px" alt="OS" /><br>
+		<br>
+
+		
+		<li>Enable Mobile Push.</li>
+		<img src="assets/images/wp4.png" width="700px" alt="WP" /><br>
+
+		<hr>
+		
+		<h3 id="signapk"><strong>G) Generate a release version of app</strong> - <a href="#toc">top</a></h3>
+
+		<p>To generate a release APK after every nessacary setup, run "flutter build apk". And for iOS <a href="READ MORE">READ MORE HERE</a></p>
+		<hr>
+		
+
+		<h3 id="conclusion"><strong>H) Conclusion</strong> - <a href="#toc">top</a></h3>
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>JideGuru</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
