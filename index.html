@@ -73,67 +73,447 @@
 		<h3 id="setupflutter"><strong>C) Setting up Futter Development Environment</strong> - <a href="#toc">top</a></h3>
 		
 		<h5>Before you start</h5>
-		<li>This documentation was created to help you with the installation and configuration of WP News application. Please, read it carefully to avoid most of potential problems with incorrect configuration.</li>
+		<li>This documentation was created to help you with the installation and configuration of Flutter WooCommerce application. Please, read it carefully to avoid most of potential problems with incorrect configuration.</li>
 
 		<li>This chapter describes how to install Flutter, Android Studio and Xcode(to build for ios only for people with MacOS X). You don't have to install Android Studio, but it's better. The project can be built without Android Studio, using VSCode or IntelliJ with Gradle build system.</li>
 
 		<br>
-		<h4><b>Set up Android Studio</b></h4>
-		<a href="https://developer.android.com/studio/install">For more Information</a><br><br>
+		<h1><b>Set up Android Studio</b></h1>
 
-		<img src="assets/images/studiosite.png" width="700px" alt="Studio" />
-		<br><li><b>For Windows</b></li>
+		<h4>You have to install Java jdk first on your system otherwise Android Studio will not work, follow the following steps to install java jdk:</h4>
+
+		<p>Go to <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html"> </a> and download Java jdk. Only Java jdk X64 Works for Flutter</p>
+
+		<img src="assets/images/java.png" width="700px" alt="Studio" /><br>
+
+		<p>Then Install the java jdk on your system</p>
+
+		<img src="assets/images/java2.jpg" width="700px" alt="Studio" /><br>
+
+		<p>You have to create Path for the java on your system Environment Variable as follow</p>
+
+		   <h4><span><b>1. Open Advanced System Settings</b></span>
+			In Windows 10 press Windows key + Pause Key, This will open the System Settings window. Go to Change settings and select the Advanced tab.</h4>
+			
+			<p>Alternatively:</p>
+			
+			<h4>Open “Windows search” – you will find it next to the Windows logo</h4>
+
+			<img src="assets/images/path1.jpg" width="700px" alt="Studio" /><br>
+
+		<h4>a. In the search field type in – advanced system settings</h4>
+
+		<h4>b. Click on the match on top of the list</h4><br>
+
+		<img src="assets/images/path2.jpg" width="700px" alt="Studio" /><br>
+
+		<h4><span><b>2. Set JAVA_HOME Environment variable</b></span></h4>
+
+		<p>In System Properties window” click “Environment Variables…</p><br>
+
+		<img src="assets/images/path3.jpg" width="700px" alt="Studio" /><br>
+
+		<p>Under “System variables” click the “New…” button and enter JAVA_HOME as “Variable name” and the path to your Java JDK directory under “Variable value</p><br>
+
+		<img src="assets/images/path4.jpg" width="700px" alt="Studio" /><br>
+
+		<h4><span><b>3. Update System PATH </b></span></h4><br>
+
+		<p>1. In “Environment Variables” window under “System variables” select Path</p>
+
+        <p>2. Click on “Edit…”</p>
+
+         <p>3. In “Edit environment variable” window click “New”</p>
+
+		 <p>4. Type in  %JAVA_HOME%\bin</p>
+		 
+		 <img src="assets/images/path5.jpg" width="700px" alt="Studio" /><br> 
+
+		 <h4><span><b>4. Test your configuration </b></span></h4><br>
+
+		 <p>Open a new command prompt and type in:</p>
+
+		 <p>echo %JAVA_HOME%</p>
+
+		 <p>this will print out the directory JAVA_HOME points to or empty line if the environment variable is not set correctly
+
+			Now type in:</p>
+
+			<p>javac -version</p>
+
+			<img src="assets/images/path6.jpg" width="700px" alt="Studio" /><br> 
+		
+		<br><h1><b>Installing Android Studio For Windows</b></h1>
 		Download <a href="https://developer.android.com/studio/">.exe file from here</a> and launch. After launching, follow the installation guide.<br><br>
 
-		<li><b>For Mac</b></li>
-		<li>1. Download <a href="https://developer.android.com/studio/">.dmg file from here</a>.</li>
+		 <h4><b>To install Android Studio on Windows, proceed as follows:</b></h4>
+
+         <h4>1. If you downloaded an .exe file (recommended), double-click to launch it.
+         If you downloaded a .zip file, unpack the ZIP, copy the android-studio folder into your Program Files folder, and then open the android-studio > bin folder and launch studio64.exe (for 64-bit machines) or studio.exe (for 32-bit machines).</h4>
+
+         <h4>2. Follow the setup wizard in Android Studio and install any SDK packages that it recommends.
+         That's it. The following video shows each step of the setup procedure when using the recommended .exe download.</h4>
+
+		<img src="assets/images/studiosite.png" width="700px" alt="Studio" /><br>
+
+		<h4>As new tools and other APIs become available, Android Studio tells you with a pop-up, or you can check for updates by clicking Help > Check for Update.</h4><br>
+
+		<img src="assets/images/updateandroid.png" width="700px" alt="Studio" /><br><br>
+
+		<h4><b>Install Android SDK Platform Packages and Tools</b></h4><br>
+
+		 <p>1. Start Android Studio.</p>
+
+		 <p>2. To open SDK Manager, do any of the these:</p>
+		 
+		 <p>On Android Studio landing page, select <span><b>Configure > SDK Manager</b></span></p><br>
+
+		 <img src="assets/images/sdk1.png" width="700px" alt="Studio" /><br>
+		 
+		 <h4>From your Android Studio application toolbar, select Tools > Android > SDK Manager.</h4>
+
+		 <img src="assets/images/sdk2.png" width="700px" alt="Studio" /><br>
+
+		 <h4>From your Android Studio application toolbar, click SDK Manager.</h4>
+
+		 <img src="assets/images/sdk3.png" width="700px" alt="Studio" /><br>
+
+		 <p>3. In the Default Settings dialog box, click these tabs to install Android SDK platform packages and developer tools.</p>
+
+			<p>a. SDK Platforms: Select the latest Android SDK package.</p>
+			
+			<p>b. SDK Tools: Select these Android SDK tools:</p>
+			
+			<li>Android SDK Build-Tools</li>
+			
+			<li>Android SDK Platform-Tools</li>
+
+			<li>Android SDK Tools</li>
+
+			<li>NDK</li>
+
+			<li>Android Support Repository</li>
+
+			<li>Google Repository</li><br>
+		
+		<h1>NOTE:</h1>
+		<p>The location of the Android SDK displayed in the Android SDK Location parameter must not contain any white spaces. The spaces may cause problems when working with Android NDK tools. You can change the SDK location by clicking the Edit button.</p><br>
+
+		<img src="assets/images/sdk4.png" width="700px" alt="Studio" /><br>
+
+		<p>4. Click Apply. Android Studio starts installing the selected packages and tools on your computer. After the installation is completed, the Status of the installed packages and tools changes from Not installed to Installed</p>
+		<p>5. Click OK</p><br><br>
+
+		<h1><b>Installing Android Studio on Mac</b></h1>
+		<li>1. Download <a href="https://developer.android.com/studio/">.dmg file from here</a>.</li><br>
 		<li>2. Launch the Android Studio DMG file.</li>
 		<li>3. Drag and drop Android Studio into the Applications folder, then launch Android Studio.</li>
 		<li>4. Select whether you want to import previous Android Studio settings, then click OK.</li>
-		<li>5. The Android Studio Setup Wizard guides you through the rest of the setup, which includes downloading Android SDK components that are required for development.</li><br><br>
+		<li>5. The Android Studio Setup Wizard guides you through the rest of the setup, which includes downloading Android SDK components that are required for development.</li><br>
+		<img src="assets/images/mac1.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac2.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac3.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac4.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac5.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac6.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac7.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac8.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac9.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac10.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac11.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac12.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac13.png" width="700px" alt="Studio" /><br>
+		<img src="assets/images/mac14.png" width="700px" alt="Studio" /><br>
 
 
-		<li><b>For Linux</b></li>
-		<li>1. Download <a href="https://developer.android.com/studio/">.zip file from here</a> and launch. After launching, drag the Android Studio into the Applications folder.</li>
-		<li>2. Unpack the .zip file you downloaded to an appropriate location for your applications, such as within /usr/local/ for your user profile, or /opt/ for shared users.</li>
-		<li>3. Select whether you want to import previous Android Studio settings or not, then click OK.</li>
-		<li>4. The Android Studio Setup Wizard guides you through the rest of the setup, which includes downloading Android SDK components that are required for development.</li>
-		<br>
-		<br>
+		<h1><b>Install Android Studio For Linux</b></h1>
+		<p>Search "android studio" in Ubuntu Software, select the first entry that shows up and install it:</p>
 
-		<h4><b>Set up Xcode (Requires MacOS X)</b></h4>
-		<a href="https://medium.com/@LondonAppBrewery/how-to-download-and-setup-xcode-10-for-ios-development-b63bed1865c">For more Information</a><br><br>
-		<img src="assets/images/xcodesite.png" width="700px" alt="Xcode" />
+		<img src="assets/images/linux1.png" width="700px" alt="Studio" /><br>
 
-		<li>Open the App Store</li>
-		<li>Search for Xcode</li>
-		<li>Install and Launch Xcode</li><br><br>
+		<img src="assets/images/linux2.png" width="700px" alt="Studio" /><br>
+
+		<p>Or if you prefer the command line way, run this in Terminal:</p>
+		<p>sudo snap install --classic android-studio</p>
+
+		<h2><b>Install Android SDK on Linux</b></h2>
+
+		<p>Open the newly installed Android Studio from dashboard:</p>
+
+		<img src="assets/images/linux3.png" width="700px" alt="Studio" /><br>
+
+		<p>Don't need to import anything if this is the first time you're installing it:</p>
+
+		<img src="assets/images/linux4.png" width="700px" alt="Studio" /><br>
+
+		<p>The Setup Wizard'll guide you through installation:</p>
+		<img src="assets/images/linux5.png" width="700px" alt="Studio" /><br>
+		<p>Select Standard install to get the latest SDK and Custom in-case you wanna change the SDK version or its install location. From here on, it's pretty straightforward, just click next-next and you'll have the SDK downloaded and installed.</p>
+		<img src="assets/images/linux6.png" width="700px" alt="Studio" /><br>
+		
+		<h1>Setting PATHs (Optional) on Linux</h1>
+
+		<p>This step might be useful if you want Android SDK's developer tool commands like adb, fastboot, aapt, etc available in Terminal. Might be needed by 3rd party dev platforms like React Native, Ionic, Cordova, etc and other tools too. For setting PATHs, edit your ~/.profile file:</p>
+		 <p>gedit ~/.profile</p>
+		 <p>and then add the following lines to it:</p>
+		 <p># Android SDK Tools PATH
+			export ANDROID_HOME=${HOME}/Android/Sdk
+			export PATH="${ANDROID_HOME}/tools:${PATH}"
+			export PATH="${ANDROID_HOME}/emulator:${PATH}"
+			export PATH="${ANDROID_HOME}/platform-tools:${PATH}"</p>
+
+		<p>If you changed SDK location at the end of Step 2, don't forget to change the line export ANDROID_HOME=${HOME}/Android/Sdk accordingly. Do a restart (or just logout and then log back in) for the PATHs to take effect.</p>
 
 
-		<h4><b>Set up Flutter SDK</b></h4>
-		<a href="https://flutter.dev/docs/get-started/install/">For more Information</a><br><br>
+		<h1><b>Set up Xcode (Requires MacOS X)</b></h1>
+
+		<h3><b>Step 1: Download and Install the Command Line Tools</b></h3>
+
+		<h4><b>Installing the standalone Command Line Tools on Mavericks and above</b></h4>
+
+		<p>Most of the work you'll be doing in this tutorial will be in the "Terminal" application. The easiest way to open an application in OS X is to search for it via Spotlight. The default keyboard shortcut for invoking Spotlight is command-Space. Once Spotlight is up, just start typing the first few letters of the app you are looking for, and once it appears, select it, and press return to launch it. See the animated GIF below for an example:</p>
+
+		<img src="assets/images/xcode.gif" width="700px" alt="Studio" /><br>
+
+		<p>Inside the Terminal window, copy and paste (or type) the following command, and press the return key on your keyboard:</p>
+
+		<p>xcode-select --install</p>
+		<p>You should see the pop up below on your screen. Click Install when it appears.</p>
+
+		<img src="assets/images/xcode1.png" width="700px" alt="Studio" /><br>
+
+		<p>Click Agree when the License Agreement appears:</p>
+
+		<img src="assets/images/xcode2.png" width="700px" alt="Studio" /><br>
+
+		<p>Your computer will then attempt to find the software, and then will start downloading it. The following popup will appear:</p>
+
+		<img src="assets/images/xcode3.png" width="700px" alt="Studio" /><br>
+
+		<p>Once the software is installed, click Done. That's it! You're now ready to go to Step 2.</p>
+
+		<img src="assets/images/xcode4.png" width="700px" alt="Studio" /><br>
+
+		<h3><b>Installing the standalone Command Line Tools on Mountain Lion</b></h3>
+
+		<p>Go to https://developer.apple.com/downloads and sign in with your Apple ID (the same one you use for iTunes and app purchases).</p>
+
+		<img src="assets/images/xcode5.jpg" width="700px" alt="Studio" /><br>
+
+		<p>Search for "command line tools" (in the search field on the left), then click on the latest version of "Command Line Tools (OS X Mountain Lion) for Xcode," and click on the the .dmg link to download it.</p>
+
+		<img src="assets/images/xcode6.jpg" width="700px" alt="Studio" /><br>
+
+		<p>Once the .dmg has finished downloading, double-click on it (if it didn't already open automatically). This will mount the disk image and open a window in your Finder that looks like this:</p>
+
+		<img src="assets/images/xcode7.jpg" width="700px" alt="Studio" /><br>
+		
+		<p>Double-click on the "Command Line Tools (Mountain Lion).mpkg" installer and go through the installation. Once the CLT are installed, launch the "Terminal" application via Spotlight (as explained in Step 1), then go to Step 2.</p>
+
+		<h3><b>Installing Xcode on Lion</b></h3>
+
+		
+		<p>Click on this link to <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">Xcode on the Mac App Store</a>, then click on "View in Mac App Store."</p>
+
+		<img src="assets/images/xcode8.jpg" width="700px" alt="Studio" /><br>
+
+		<p>It should automatically launch the "App Store" app on your Mac and take you the Xcode page. Click on the "Free" button, then click on "Install App."
+
+			Once the installation is complete, go to your Applications folder and double-click on Xcode, then install any required components if asked to.</p>
+
+		<img src="assets/images/xcode9.jpg" width="700px" alt="Studio" /><br>	
+
+		<p>Go to Xcode's Preferences via the menu bar, or by pressing the command and comma keys</p>
+
+		<img src="assets/images/xcode10.jpg" width="700px" alt="Studio" /><br>
+
+		<p>Click on the "Downloads" icon, then click on the "Install" button next to "Command Line Tools."</p>
+
+		<img src="assets/images/xcode11.jpg" width="700px" alt="Studio" /><br>
+
+		<p>When prompted to log in, you should be able to use the same email and password you use for iTunes and app purchases. Once the Command Line Tools are installed, quit Xcode, launch the "Terminal" application via Spotlight (as explained in Step 1), then go to Step 2.
+
+			IMPORTANT NOTE: If you upgraded to Mountain Lion from Lion, and you already had Xcode installed on Lion, and you updated to Xcode 4.4 and updated the Command Line Tools while still on Lion, you will have to go back to Xcode and download the Command Line Tools again after upgrading to Mountain Lion.
+			
+			Snow Leopard Instructions
+			UPDATE: A kind reader (P. Martin) pointed out that the Xcode 4.2 download for Snow Leopard is only available to those registered in the $99/year developer program. I confirmed that the latest version of Xcode for Snow Leopard available to me while signed in with a free account is 3.2.6. I have not tested this setup with Xcode 3.2.6, but I would love to hear from you if you have. Otherwise, I recommend that you upgrade to a newer version of OS X.
+			
+			Go to <a href="https://developer.apple.com/downloads">https://developer.apple.com/downloads</a> and sign in with your Apple ID (the same one you use for iTunes and app purchases).
+			
+			If you are part of the $99/year Apple developer program, search for "xcode 4.2" (in the search field on the left), then click on "Xcode 4.2 for Snow Leopard," and click on the .dmg link to download it.
+			
+			Otherwise, search for "xcode 3.2", then click on "Xcode 3.2.6 and iOS SDK 4.3 for Snow Leopard," and click on the .dmg link to download it. As mentioned at the beginning of this section, I have not tested this tutorial with Xcode 3.2.6, so I would recommend that you upgrade to a newer version of OS X.</p>
+
+		<img src="assets/images/xcode12.jpg" width="700px" alt="Studio" /><br>
+
+		<p>Once the .dmg has finished downloading, it should automatically mount the disk image and open a window in your Finder that looks like this:</p>
+
+		<img src="assets/images/xcode13.jpg" width="700px" alt="Studio" /><br>
+
+		<p>Double-click on the "Xcode" package installer. Once the installer launches, make sure all the checkboxes are checked, as shown in the screenshot below:</p>
+
+		<img src="assets/images/xcode14.jpg" width="700px" alt="Studio" /><br>
+
+		<p>Click "Continue," and go through the rest of the installation. If the installation fails, quit the installer, then run Software Update and install any updates that it finds.</p>
+
+		<img src="assets/images/xcode15.jpg" width="700px" alt="Studio" /><br>
+
+		<p>If no new updates are available, restart your computer and try installing Xcode again. Once Xcode is successfully installed, you can move on to Step 2.</p>
+
+		<h3><b>Step 2: Install Homebrew</b></h3>
+
+		<p><a href="https://brew.sh/">Homebrew</a>, "the missing package manager for OS X," allows you to easily install hundreds of open-source tools. The full installation instructions are available in the <a href="https://docs.brew.sh/Installation">Homebrew Documentation</a>, but you should only need to run the command that's listed at the top of the Homebrew site:</p>
+
+		<p>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</p>
+
+		<p>Note that the command listed on the Homebrew site could change, so please make sure that what I have listed above is the same. If it isn't, please let me know and I'll update it.
+
+			Copy and paste the command into your Terminal window, press return, then follow the instructions when prompted, as highlighted in the screenshot below. Note that Terminal does not provide visual feedback when you type your password. Just type it slowly and press return.</p>
+
+			<img src="assets/images/xcode16.jpg" width="700px" alt="Studio" /><br>
+
+		<p>Once the installation is successful, run the following command:</p>
+
+		<p>brew doctor</p>
+
+		<p>If you get Your system is ready to brew, you can move on to Step 3. Otherwise, go to the Troubleshooting section to learn how to fix errors and warnings you might run into.</p>
+
+
+		<h3><b>Step 3: Install Git</b></h3>
+
+		<p>Git is the version control system of choice among many web developers. With Homebrew, installing Git is as easy as this:</p>
+
+		<img src="assets/images/xcode17.jpg" width="700px" alt="Studio" /><br>
+
+		<p>brew update</p>
+		<p>brew install git</p>
+
+		<img src="assets/images/xcode17.jpg" width="700px" alt="Studio" /><br>
+
+		<p>Since we just installed Homebrew, we could have skipped brew update, but it's a good habit to run it before installing anything with Homebrew because Homebrew is updated regularly.</p>
+
+			<p>To verify:</p>
+
+			<p>git --version</p>
+
+			<p>You should get git version 2.20.1 or later.
+
+				Run brew doctor to make sure everything is still working. If your system is ready to brew, you can move on to Step 4.</p>
+
+		<h3><b>Step 4: Configure Git with GitHub for Mac</b></h3>
+
+		<p>Download, install, and launch <a href="https://desktop.github.com/">GitHub for Mac.</a></p>
+
+		<p>If you don't have a GitHub account, click on the Sign Up at GitHub.com link in the app, then come back to the app to complete the setup. I highly recommend that you turn on two-factor authentication for your GitHub account.</p>
+
+        <p>Follow these steps to set up GitHub for Mac when you first launch it:</p>
+
+	   <li>Click Continue</li>
+	   <li>Enter your username and password, then click Sign In</li>
+	   <li>Enter your two-factor authentication code (if you have it turned on)</li>
+	   <li>Click Continue</li>
+	   <li>Enter an email address that you want to be attached to your commits. It doesn't have to be your real email address, but if you leave this blank, Git will nag you about it every time you commit.
+	</li>
+	   <li>Click Continue</li>
+	   <li>Click Done</li><br><br>
+
+		<h1><b>Set up Flutter SDK</b></h1>
+		<h5>1. Download the following installation bundle to get the latest stable release of the Flutter SDK: <a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_v1.5.4-hotfix.2-stable.zip">.zip file from here</a></h5>
 		<img src="assets/images/fluttersite.png" width="700px" alt="Flutter" />
+		<h5>2.Extract the zip file and place the contained flutter in the desired installation location for the Flutter SDK (eg. C:\src\flutter; do not install Flutter in a directory like C:\Program Files\ that requires elevated privileges).</h5>
+		<h5>3. Locate the file flutter_console.bat inside the flutter directory. Start it by double-clicking.</h5>
+		
+		<img src="assets/images/flus.png" width="700px" alt="Studio" />
 
-		<br><li><b>For Windows</b></li>
-		<li>Download <a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_v1.5.4-hotfix.2-stable.zip">.zip file from here</a></li>
-		<li>Extract the zip file and place the contained flutter in the desired installation location for the Flutter SDK (eg. C:\src\flutter; do not install Flutter in a directory like C:\Program Files\ that requires elevated privileges).</li>
-		<li>Locate the file flutter_console.bat inside the flutter directory. Start it by double-clicking.</li>
-		<li>You are now ready to run Flutter commands in the Flutter Console! <a href="https://flutter.dev/docs/get-started/install/windows">Read More about updating your path here</a></li><br>
+		<p>You are now ready to run Flutter commands in the Flutter Console!</p><br>
+		
+		<h4><b>Update your path</b></h4>
+		<p>If you wish to run Flutter commands in the regular Windows console, take these steps to add Flutter to the PATH environment variable:</p>
 
-		<br><li><b>For MacOS X</b></li>
-		<li>Download <a href="https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.5.4-hotfix.2-stable.zip">.zip file from here</a></li>
-		<li>Extract the file in the desired location</li>
-		<li><a href="https://flutter.dev/docs/get-started/install/macos#update-your-path">Update your path</a> then run flutter doctor</li><br>
+		<li>From the Start search bar, type ‘env’ and select Edit environment variables for your account</li>
+		<li>Under User variables check if there is an entry called Path:
+			If the entry does exist, append the full path to flutter\bin using ; as a separator from existing values.
+			If the entry does not exist, create a new user variable named Path with the full path to flutter\bin as its value.
+			Note that you will have to close and reopen any existing console windows for these changes to take effect.
+			
+			</li><br>
 
-		<br><li><b>For Linux</b></li>
-		<li>Download <a href="https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.5.4-hotfix.2-stable.tar.xz">.tar.xz file from here</a></li>
-		<li>Extract the file in the desired location</li>
-		<li><a href="https://flutter.dev/docs/get-started/install/linux#update-your-path">Update your path</a> then run flutter doctor</li><br>
+		<h4><b>Run flutter doctor</b></h4>
+		<p>C:\src\flutter>flutter doctor</p>
+
+		<img src="assets/images/doctor.png" width="700px" alt="Studio" />
+
+		<p>This command checks your environment and displays a report of the status of your Flutter installation. Check the output carefully for other software you might need to install or further tasks to perform (shown in bold text).</p>
+
+		<p>[-] Android toolchain - develop for Android devices
+			• Android SDK at D:\Android\sdk
+			✗ Android SDK is missing command line tools; download from https://goo.gl/XxQghQ
+			• Try re-installing or updating your Android SDK,
+			  visit https://flutter.dev/setup/#android-setup for detailed instructions.</p>
+		
+		<p>The following sections describe how to perform these tasks and finish the setup process. Once you have installed any missing dependencies, you can run the flutter doctor command again to verify that you’ve set everything up correctly.</p>
+
+		<h3><b>Set up the Android emulator</b></h3>
+
+		<p>1. Enable VM acceleration on your machine.</p>
+		<p>2. Launch Android Studio > Tools > Android > AVD Manager and select Create Virtual Device. (The Android submenu is only present when inside an Android project.)</p>
+
+		<img src="assets/images/emu.png" width="700px" alt="Studio" /><br>
+
+		<p>3. Choose a device definition and select Next.</p>
+
+		<img src="assets/images/emu1.png" width="700px" alt="Studio" /><br>
+
+		<p>4. Select one or more system images for the Android versions you want to emulate, and select Next. An x86 or x86_64 image is recommended.
+		</p>
+
+		<img src="assets/images/emu2.png" width="700px" alt="Studio" /><br>
 
 
-		<h4><b>Set up a Code Editor to run flutter</b></h4>
-		<a href="https://flutter.dev/docs/get-started/editor">For more Information</a><br><br>
+		<p>5. Under Emulated Performance, select Hardware - GLES 2.0 to enable hardware acceleration.</p>
+		<p>6. Verify the AVD configuration is correct, and select Finish.
 
+			For details on the above steps, see Managing AVDs.
+			</p>
+		<p>7. In Android Virtual Device Manager, click Run in the toolbar. The emulator starts up and displays the default canvas for your selected OS version and device.
+		</p><br>
+
+		<img src="assets/images/emu3.png" width="700px" alt="Studio" /><br><br>
+
+
+		
+
+		
+		<br><h1><b>Get the Flutter SDK For MacOS X</b></h1>
+		<h5>1. Download the following installation bundle to get the latest stable release of the Flutter SDK: <a href="https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.5.4-hotfix.2-stable.zip">.zip file from here</a></h5>
+	
+		
+		<img src="assets/images/macflu.png" width="700px" alt="Studio" />
+
+		<h5>2. Extract the file in the desired location, for example</h5>
+
+		<h5> $ cd ~/development</h5>
+		<h5> $ unzip ~/Downloads/flutter_macos_v1.5.4-hotfix.2-stable.zip</h5>
+
+		<img src="assets/images/macflu1.png" width="700px" alt="Studio" />
+
+		<h5>Add the flutter tool to your path:</h5>
+
+		<h5> $ export PATH="$PATH:`pwd`/flutter/bin"</h5>
+		<p>This command sets your PATH variable for the current terminal window only. To permanently add Flutter to your path, see Update your path.</p>
+		
+		<img src="assets/images/macflu2.png" width="700px" alt="Studio" />
+
+		<h5>Optionally, pre-download development binaries:
+
+			The flutter tool downloads platform-specific development binaries as needed. For scenarios where pre-downloading these artifacts is preferable (e.g., hermetic build environments, intermittent network availability), iOS and Android binaries can be downloaded ahead of time by running:</h5>
+
+		<p>$ flutter precache</p>
+
+		<p>You are now ready to run Flutter commands!</p>
+
+		<h1><b>Set up a Code Editor to run flutter</b></h1>
+		
 		<img src="assets/images/studio.png" width="100px" alt="Studio" />
 		<br><li><b>Android Studio / IntelliJ</b></li>
 		<li>Start Android Studio</li>
@@ -152,32 +532,6 @@
 
 		<br>
 		<br>
-		<hr>
-		
-		<h3 id="firebase"><strong>D) Connect Firebase to OneSignal</strong> - <a href="#toc">top</a></h3>
-		
-		<h4><li>Goto <a href="http://firebase.com">firebase.com</a> and login to your account.</li></h4>
-		<img src="assets/images/firebase1.png" width="700px" alt="firebase" /><br>
-		<br>
-		
-		<h4><li>Click on add project to create a new project</li></h4>
-		<img src="assets/images/firebase2.png" width="700px" alt="firebase" /><br>
-		<img src="assets/images/firebase3.png" width="300px" alt="firebase" /><br>
-		<br>
-		<p>Now your firebase project has been created. TO create a OneSignal account navigate to <a href="http://onesignal.com">onesignal.com</a> and create an account.</p>
-		<br>
-		<h4><li>Click on add app to create a new project</li></h4>
-		<img src="assets/images/onesignal1.png" width="700px" alt="onesignal" /><br>
-		<br>
-		<h4><li>After creation a pop up box will appear for configuration. Choose the platform(s) you want which can be either Android or iOS or both</li></h4>
-		<img src="assets/images/onesignal2.png" width="700px" alt="onesignal" /><br>
-		<img src="assets/images/onesignal3.png" width="700px" alt="onesignal" /><br>
-		<h4><li>Now go back to your firebase and copy Sender ID and Server key and paste into the onesignal pop up.</li></h4>
-		<img src="assets/images/firebase4.png" width="700px" alt="firebase" /><br>
-		<h4><li>After that just close the popup because the SDK as already been setup in the app's source code</li></h4>
-
-
-
 		<hr>
 		
 		<h3 id="runApp"><strong>E) Setup and Run the source code</strong> - <a href="#toc">top</a></h3>
